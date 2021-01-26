@@ -1,5 +1,7 @@
 .vscode/
+adabins/data/
 weights/
 __pycache__/*
 *.pyc 
 *.pyo
+
