@@ -157,13 +157,12 @@ class Adabins(nn.Module):
 
         print(type(backend))
 
-        self.backend = backend
         self.num_bins = num_bins
         self.min_val = min_val
         self.max_val = max_val
         self.norm = norm
 
-        self.encoder = EncoderBlock(backend=self.backend)
+        self.encoder = EncoderBlock(backend=backend)
 
         self.adaptive_bins_layer = MiniVIT(
             in_channels=128,

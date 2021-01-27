@@ -1,7 +1,3 @@
-import torch
-import os
-
-
 def load_checkpoint(fpath, model, optimizer=None):
     ckpt = torch.load(fpath, map_location="cpu")
     if optimizer is None:
@@ -22,6 +18,7 @@ def load_checkpoint(fpath, model, optimizer=None):
 
     modified = {}  # backward compatibility to older naming of architecture blocks
     for k, v in load_dict.items():
+
         if k.startswith("adaptive_bins_layer.embedding_conv."):
             k_ = k.replace(
                 "adaptive_bins_layer.embedding_conv.", "adaptive_bins_layer.conv3x3."
@@ -33,10 +30,17 @@ def load_checkpoint(fpath, model, optimizer=None):
 
             k_ = k.replace(
                 "adaptive_bins_layer.patch_transformer.embedding_encoder",
-                "adaptive_bins_layer.patch_transformer.embedding_convPxP",
+                "adaptive_bins_layer.patch_transformer.embedding_conv",
             )
             modified[k_] = v
             # del load_dict[k]
+        elif "transformer_encoder" in k:
+            k_ = k.replace("transformer_encoder", "transformerEncoder")
+            modified[k_] = v
+        elif "up" in k:
+            k_ = k.replace("up", "upsample")
+            modified[k_] = v
+
         else:
             modified[k] = v  # else keep the original
 
