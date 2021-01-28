@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from layer_factory import PixelWiseDotProduct, PatchTransformer
+from .layer_factory import PixelWiseDotProduct, PatchTransformer
 
 from typing import Union
 

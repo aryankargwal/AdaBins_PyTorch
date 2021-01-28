@@ -1,9 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from efficientnet_pytorch import EfficientNet
 
-from miniVIT import MiniVIT
+from .miniVIT import MiniVIT
 
 import os
 
@@ -15,11 +14,11 @@ model_names = [
 model_urls = {
     "tf_efficientnet_b5_ra": (
         "tf_efficientnet_b5_ra-9a3e5369.pth",
-        "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b5_ra-9a3e5369.pth",
+        "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b5_ra-9a3e5369.pth",  # noqa
     ),
     "tf_efficientnet_b5_ap": (
         "tf_efficientnet_b5_ap-9e82fae8.pth",
-        "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b5_ap-9e82fae8.pth",
+        "https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_efficientnet_b5_ap-9e82fae8.pth",  # noqa
     ),
 }
 
