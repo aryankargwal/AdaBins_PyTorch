@@ -18,10 +18,10 @@ The <b><i>AdaBins</i></b> module performs a global statistical analysis of the o
 For our implementation we decided to go for the [NYU Depth Dataset v2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html). The dataset consists of over 1400 Densely Labeled indoor images with RGB and depth images pairs.<br>
 <img src="https://cs.nyu.edu/~silberman/images/nyu_depth_v2_labeled.jpg"> 
 
-## Our Results
-Test Video<br>
-<video src="examples/demovid.mp4">
-Detected Video<br>
-<video src="examples/detected_demovid.mp4">
+## The Results
+Paper Results<br>
+<img src="examples/paper_image.png" style="height:400px"><br>
+Our Results<br>
+<img src="examples/detected_image.png" style="height:400px"><br>
 
 You can access the demo notebook [here](https://nbviewer.jupyter.org/github/aryankargwal/AdaBins_PyTorch/blob/main/Adabins_Inference_example.ipynb) if the [GitHub](https://github.com/aryankargwal/AdaBins_PyTorch/blob/main/Adabins_Inference_example.ipynb) does not open.
