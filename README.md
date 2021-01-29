@@ -20,8 +20,8 @@ For our implementation we decided to go for the [NYU Depth Dataset v2](https://c
 
 ## The Results
 Paper Results<br>
-<img src="examples/paper_image.png" style="height:400px"><br>
+<img src="examples/paper_image.png" height="400px"><br>
 Our Results<br>
-<img src="examples/detected_image.png" style="height:400px"><br>
+<img src="examples/detected_image.png" height="400px"><br>
 
 You can access the demo notebook [here](https://nbviewer.jupyter.org/github/aryankargwal/AdaBins_PyTorch/blob/main/Adabins_Inference_example.ipynb) if the [GitHub](https://github.com/aryankargwal/AdaBins_PyTorch/blob/main/Adabins_Inference_example.ipynb) does not open.
